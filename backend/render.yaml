@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: saasquatch-lead-intelligence-api
+    runtime: node
+    rootDir: backend
+    buildCommand: npm ci && npm run build
+    startCommand: node dist/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 4000
+      - key: DB_PATH
+        # For Render Starter+ with a Disk mount, use /data/leads.db
+        # For free tier (ephemeral FS), the auto-seed in index.ts will populate on every restart
+        value: ./data/leads.db
+      - key: CORS_ORIGIN
+        # Set this to your actual Vercel frontend URL
+        value: https://frontend-nine-pink-70.vercel.app
