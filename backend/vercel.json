@@ -6,10 +6,11 @@
       "maxDuration": 30
     }
   },
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/api/index"
+      "src": "/(.*)",
+      "dest": "/api/index",
+      "methods": ["GET", "HEAD", "POST", "PATCH", "DELETE", "OPTIONS"]
     }
   ]
 }
