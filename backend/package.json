@@ -1,0 +1,30 @@
+{
+  "name": "saasquatch-lead-intelligence-backend",
+  "version": "0.1.0",
+  "description": "Backend API for SaaSquatch Lead Intelligence",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "seed": "tsx src/db/seed.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test \"src/**/*.test.ts\""
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "sql.js": "^1.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.7.4",
+    "@types/sql.js": "^1.4.11",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}
